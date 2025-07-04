@@ -1,0 +1,162 @@
+/* =========================
+   VARIABLES & TYPOGRAPHY
+========================= */
+:root {
+  --primary-dark: #0B3D91;
+  --primary-light: #2851A3;
+  --accent-saffron: #FF9933;
+  --bg-light: #F9FAFB;
+  --text-dark: #212529;
+  --text-light: #fff;
+  --card-radius: 0.75rem;
+}
+
+/* Font setup */
+body, html {
+  margin: 0; padding: 0;
+  background: var(--bg-light);
+  color: var(--text-dark);
+  font-family: 'Roboto', sans-serif;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(90deg, var(--primary-dark), var(--primary-light));
+  padding: 0.75rem 1rem;
+}
+.navbar .navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.navbar .nav-link {
+  color: var(--text-light);
+  font-weight: 500;
+}
+.navbar .nav-link:hover {
+  color: var(--accent-saffron);
+}
+
+/* Hero */
+.hero {
+  height: 550px;
+  background: url('heroImage.jpg') center/cover no-repeat;
+  position: relative;
+  display: flex; align-items: center; justify-content: center;
+}
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: var(--card-radius);
+  text-align: center;
+}
+.hero-overlay h1 {
+  color: var(--text-light);
+  font-size: 2.75rem;
+  margin-bottom: 1rem;
+}
+.hero-overlay p {
+  color: var(--text-light);
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.hero-overlay .btn {
+  font-size: 1.1rem;
+}
+
+/* Team Cards */
+.team-card {
+  border: none;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.team-card img {
+  height: 250px;
+  object-fit: cover;
+}
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Blog Grid & Cards */
+#posts-grid .card {
+  border: none;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+#posts-grid .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+#posts-grid .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+#posts-grid .card-title {
+  font-family: var(--font-heading, 'Montserrat');
+  background: linear-gradient(45deg, var(--primary-dark), var(--accent-saffron));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#posts-grid .card-text {
+  color: var(--text-dark);
+}
+
+/* Form Controls */
+.form-control, .form-select {
+  border-radius: var(--card-radius);
+}
+input::placeholder {
+  color: #888;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--primary-dark);
+  border: none;
+}
+.btn-primary:hover {
+  background: var(--accent-saffron);
+  color: var(--text-dark);
+}
+.btn-outline-primary {
+  border-radius: var(--card-radius);
+}
+
+/* Footer */
+.footer {
+  background: var(--primary-dark);
+  color: var(--text-light);
+}
+.footer .social {
+  color: var(--text-light);
+  font-size: 1.5rem;
+}
+.footer .social:hover {
+  color: var(--accent-saffron);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-overlay h1 { font-size: 2rem; }
+  .hero-overlay p { font-size: 1rem; }
+}
+
+/* Utility Helpers */
+.text-gradient {
+  background: linear-gradient(45deg, var(--primary-dark), var(--accent-saffron));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ✅ Fix for navbar overlap */
+.view-container {
+  padding-top: 100px;
+}
